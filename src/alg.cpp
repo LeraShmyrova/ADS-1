@@ -30,14 +30,14 @@ uint64_t nextPrime(uint64_t value) {
   count = 11;
   return value + 1;
   }
-  }
   value += 1;
+  }  
 }
 uint64_t sumPrime(uint64_t hbound) {
   int i = 2;
   int summ = 0;
   for (i == 2; i < hbound; i++) {
-  if checkPrime(i) == True) {
+  if (checkPrime(i) == True) {
   summ += i;
   }
   }
