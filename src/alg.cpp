@@ -14,23 +14,21 @@ bool checkPrime(uint64_t value) {
 }
 uint64_t nPrime(uint64_t n) {
   int num = 0;
-  int i = 0;
-  do {
+  int i = 1;
+  while ( num < n ) {
   i++;
   if (checkPrime(i)) {
     num++;
   }
-  } while ( num < n );
+  }
   return i;
 }
 uint64_t nextPrime(uint64_t value) {
-  int count = 0;
-  while (count < 10) {
-  if (checkPrime(value + 1) == true) {
-  count = 11;
-  return value + 1;
+  while (true) {
+  value++;
+  if (checkPrime(value) == true) {
+  return value;
   }
-  value += 1;
   }
   return 0;
 }
